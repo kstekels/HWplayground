@@ -77,11 +77,15 @@ let metersBackward = 1
 
 while true{
     bugForward += (metersForward - metersBackward)  // 2m forward and 1m backward
-    numberOfdays += 1
-    if bugForward >= 10{
+    
+    if bugForward < 10{
+        numberOfdays += 1
+    }else{
         break
+        }
+        
     }
-}
+
 
 print("Bug will spend \(numberOfdays) days to reach top of the post!")
 
